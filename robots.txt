@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://denmodule.thanhdatled.com/sitemap.xml
