@@ -60,6 +60,15 @@
   .cta-bottom .btn-primary { background:#fff; color:var(--brand-red); }
   .site-footer { background:#161616; color:#bbb; text-align:center; padding:28px 20px; font-size:13.5px; margin-top:20px; }
   @media (max-width:680px){ .product-top{flex-direction:column;} .site-header nav{display:none;} }
+  .cat-banner { position:relative; height:220px; background-size:cover; background-position:center; border-radius:0; }
+  .cat-banner-overlay { position:absolute; inset:0; background:rgba(0,0,0,.5); display:flex; flex-direction:column;
+    justify-content:center; align-items:center; text-align:center; color:#fff; padding:20px; }
+  .cat-banner-overlay h1 { font-size:clamp(22px,4vw,32px); margin-bottom:8px; }
+  .cat-banner-overlay p { font-size:15px; opacity:.9; max-width:600px; }
+
+  .trust-bar { display:flex; justify-content:center; gap:32px; background:#fff; padding:16px 24px;
+    border-bottom:1px solid var(--border); flex-wrap:wrap; }
+  .trust-item { display:flex; align-items:center; gap:8px; font-size:14px; font-weight:600; color:var(--text-dark); }
   </style>
 </head><body>
 
@@ -75,11 +84,35 @@
     </div>
   </header>
 <div class="breadcrumb"><a href="https://denmodule.thanhdatled.com/">Trang chủ</a> &raquo; Đèn Pha Module Sân Tennis</div>
+
+<div class="cat-banner" style="background-image:url('https://your-r2-domain.com/cat-tennis.jpg');">
+  <div class="cat-banner-overlay">
+    <h1>Đèn Pha Module Sân Tennis</h1>
+    <p>Ánh sáng đều, chống chói, đáp ứng tiêu chuẩn chiếu sáng thể thao ngoài trời.</p>
+  </div>
+</div>
+
+
+  <div class="trust-bar">
+    <div class="trust-item">✅ <span>Chính hãng 100%</span></div>
+    <div class="trust-item">🛡️ <span>Bảo hành dài hạn</span></div>
+    <div class="trust-item">🚚 <span>Giao hàng toàn quốc</span></div>
+    <div class="trust-item">💬 <span>Tư vấn kỹ thuật miễn phí</span></div>
+  </div>
+
 <div class="container">
-  <h1 class="section-title">Đèn Pha Module Sân Tennis</h1>
-  <p class="category-desc">Ánh sáng đều, chống chói, đáp ứng tiêu chuẩn chiếu sáng thể thao ngoài trời.</p>
-  <h2 class="section-title">Sản phẩm trong danh mục</h2>
-  <div class="grid"><p>Chưa có sản phẩm nào trong danh mục này.</p></div>
+  <h2 class="section-title">Sản phẩm trong danh mục (2)</h2>
+  <div class="grid"><a class="product-card" href="/san-pham/den-pha-led-module-200w/">
+    <img src="https://img.thanhdatshop.com/den-pha-led/den-pha-module-5050-01/den-pha-module-5050-01-200w/den-pha-module-5050-01-200w-1.jpg
+" alt="Đèn Pha LED Module 200W">
+    <h3>Đèn Pha LED Module 200W</h3>
+    <div class="price">2,500,000 đ</div>
+  </a><a class="product-card" href="/san-pham/den-pha-led-module-200w/">
+    <img src="https://img.thanhdatshop.com/den-pha-led/den-pha-module-5050-01/den-pha-module-5050-01-200w/den-pha-module-5050-01-200w-1.jpg
+" alt="Đèn Pha LED Module 200W">
+    <h3>Đèn Pha LED Module 200W</h3>
+    <div class="price">2,500,000 đ</div>
+  </a></div>
 </div>
 <footer class="site-footer">© 2026 Thanh Dat LED. All rights reserved.</footer>
 </body></html>
