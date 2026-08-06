@@ -17,19 +17,57 @@
   .site-header nav { display:flex; gap:20px; font-weight:600; font-size:14.5px; align-items:center; }
   .site-header nav a { padding:6px 10px; border-radius:6px; transition:color .2s, background .2s; }
   .site-header nav a:hover { color:var(--brand-red); background:#fff5f5; }
-  .site-header .contact { display:flex; gap:12px; }
+  .site-header .contact { display:flex; gap:12px; align-items:center; }
   .site-header .contact a { padding:8px 16px; border-radius:8px; font-weight:700; font-size:14px; display:flex; align-items:center; gap:6px; box-shadow:0 2px 5px rgba(0,0,0,.1); }
   .site-header .contact .hotline { background:var(--brand-red); color:#fff; }
   .site-header .contact .zalo { background:var(--brand-blue); color:#fff; }
+  .site-header .contact .ai-chat-btn { background:linear-gradient(135deg, #0b1f3a, #1a5fa8); color:#ffcc00; border:1px solid #ffcc00; }
   
   .menu-toggle { display:none; background:none; border:none; font-size:26px; cursor:pointer; }
   
   .floating-contact { display: none !important; }
 
+  /* NÚT CHATBOT NỔI GÓC MÀN HÌNH (MỞ TAB MỚI) */
+  .floating-chatbot-btn {
+    position: fixed;
+    bottom: 24px;
+    right: 24px;
+    z-index: 9998;
+    background: linear-gradient(135deg, #0b1f3a, #1a5fa8);
+    color: #fff;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 18px 10px 10px;
+    border-radius: 50px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.25);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 14px;
+    transition: transform 0.2s, box-shadow 0.2s;
+    border: 1px solid rgba(255,204,0,0.4);
+  }
+  .floating-chatbot-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 24px rgba(0,0,0,0.35);
+    color: #ffcc00;
+  }
+  .floating-chatbot-icon {
+    width: 36px;
+    height: 36px;
+    background: #ffcc00;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+  }
+
   .mobile-cta-bar { display:none; position:fixed; bottom:0; left:0; right:0; background:#fff; border-top:1px solid var(--border); z-index:9999; padding:8px 12px; justify-content:space-around; align-items:center; box-shadow:0 -4px 12px rgba(0,0,0,0.1); }
   .mobile-cta-bar a { flex:1; text-align:center; padding:10px; border-radius:6px; font-weight:700; font-size:14px; color:#fff; margin:0 4px; }
   .mobile-cta-bar .m-call { background:var(--brand-red); }
   .mobile-cta-bar .m-zalo { background:var(--brand-blue); }
+  .mobile-cta-bar .m-chat { background:#0b1f3a; color:#ffcc00; }
 
   @media (max-width:768px) {
     .site-header nav { display:none; position:absolute; top:100%; left:0; right:0; background:#fff; flex-direction:column; padding:15px 24px; box-shadow:0 4px 12px rgba(0,0,0,.1); border-top:1px solid var(--border); }
@@ -76,6 +114,7 @@
     <div class="contact">
       <a class="hotline" href="tel:0986474671">📞 0986474671</a>
       <a class="zalo" href="https://zalo.me/0986474671" target="_blank">💬 Zalo</a>
+      <a class="ai-chat-btn" href="https://khuyenmai.thanhdatled.com/tdl-chatbot/" target="_blank">🤖 Chat AI 24/7</a>
     </div>
   </header>
 <div class="breadcrumb"><a href="https://denmodule.thanhdatled.com/">Trang chủ</a> &raquo; Đèn Pha Module Sân Pickleball</div>
@@ -213,8 +252,18 @@
     </div>
   </footer>
 
+  <!-- NÚT CHATBOT NỔI GÓC MÀN HÌNH (MỞ TAB MỚI) -->
+  <a href="https://khuyenmai.thanhdatled.com/tdl-chatbot/" target="_blank" class="floating-chatbot-btn">
+    <div class="floating-chatbot-icon">🤖</div>
+    <div>
+      <div style="font-size:11px; color:#ffcc00; font-weight:700;">TƯ VẤN 24/7</div>
+      <div>Chat AI Báo Giá Sỉ</div>
+    </div>
+  </a>
+
   <div class="mobile-cta-bar">
     <a class="m-call" href="tel:0986474671">📞 Gọi ngay</a>
     <a class="m-zalo" href="https://zalo.me/0986474671" target="_blank">💬 Nhắn Zalo</a>
+    <a class="m-chat" href="https://khuyenmai.thanhdatled.com/tdl-chatbot/" target="_blank">🤖 Chat AI</a>
   </div>
 </body></html>
