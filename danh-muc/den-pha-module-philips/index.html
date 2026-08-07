@@ -1,226 +1,151 @@
-<!DOCTYPE html><html lang="vi"><head>
-<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Đèn Pha Module Philips | Thanh Dat LED</title>
-<link rel="canonical" href="https://denmodule.thanhdatled.com/danh-muc/den-pha-module-philips/">
-<link rel="icon" href="https://tdllighting.com/wp-content/uploads/2022/09/tdl-thanhdatled-1.png" type="image/x-icon">
-<style>
-  :root { --brand-red:#d32f2f; --brand-blue:#0068ff; --text-dark:#222; --text-muted:#666; --bg-light:#f4f6f9; --border:#e2e8f0; --radius:12px; }
+<!DOCTYPE html><html lang="vi"><head><meta charset="UTF-8"><title>Đèn Pha Module Philips</title><style>
+  :root { --brand-red:#d32f2f; --brand-blue:#0068ff; --text-dark:#222; --border:#e2e8f0; --radius:12px; }
   * { margin:0; padding:0; box-sizing:border-box; }
-  body { font-family:'Segoe UI',Arial,sans-serif; color:var(--text-dark); background:var(--bg-light); line-height:1.6; padding-bottom:70px; }
+  body { font-family:'Segoe UI',Arial,sans-serif; color:var(--text-dark); background:#f4f6f9; line-height:1.6; padding-bottom:70px; }
   a { text-decoration:none; color:var(--brand-blue); }
-  a:hover { text-decoration:underline; }
-  img { max-width:100%; display:block; height:auto; }
-  
-  .site-header { position:sticky; top:0; z-index:1000; background:#fff; border-bottom:1px solid var(--border);
-    padding:12px 24px; display:flex; align-items:center; justify-content:space-between; box-shadow:0 2px 8px rgba(0,0,0,.04); }
+  .site-header { position:sticky; top:0; z-index:1000; background:#fff; border-bottom:1px solid var(--border); padding:12px 24px; display:flex; align-items:center; justify-content:space-between; }
   .site-header .logo img { height:46px; }
   .site-header nav { display:flex; gap:20px; font-weight:600; font-size:14.5px; align-items:center; }
-  .site-header nav a { padding:6px 10px; border-radius:6px; transition:color .2s, background .2s; }
-  .site-header nav a:hover { color:var(--brand-red); background:#fff5f5; }
+  .site-header nav a { padding:6px 10px; border-radius:6px; color:#222; }
   .site-header .contact { display:flex; gap:12px; align-items:center; }
-  .site-header .contact a { padding:8px 16px; border-radius:8px; font-weight:700; font-size:14px; display:flex; align-items:center; gap:6px; box-shadow:0 2px 5px rgba(0,0,0,.1); }
-  .site-header .contact .hotline { background:var(--brand-red); color:#fff; }
-  .site-header .contact .zalo { background:var(--brand-blue); color:#fff; }
+  .site-header .contact a { padding:8px 16px; border-radius:8px; font-weight:700; font-size:14px; display:flex; align-items:center; gap:6px; color:#fff; }
+  .site-header .contact .hotline { background:var(--brand-red); }
+  .site-header .contact .zalo { background:var(--brand-blue); }
   .site-header .contact .ai-chat-btn { background:linear-gradient(135deg, #0b1f3a, #1a5fa8); color:#ffcc00; border:1px solid #ffcc00; }
   
-  .menu-toggle { display:none; background:none; border:none; font-size:26px; cursor:pointer; }
+  .floating-chatbot-btn { position:fixed; bottom:24px; right:24px; z-index:9998; background:linear-gradient(135deg,#0b1f3a,#1a5fa8); color:#fff; display:flex; align-items:center; gap:10px; padding:10px 18px 10px 10px; border-radius:50px; box-shadow:0 4px 20px rgba(0,0,0,0.25); text-decoration:none; font-weight:600; font-size:14px; border:1px solid rgba(255,204,0,0.4); }
+  .floating-chatbot-icon { width:36px; height:36px; background:#ffcc00; border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:18px; color:#0b1f3a; }
   
-  .floating-contact { display: none !important; }
-
-  /* THANH TƯ VẤN DI ĐỘNG CHUẨN 3 NÚT: GỌI NGAY - NHẮN ZALO - CHAT AI */
-  .mobile-cta-bar { display:none; position:fixed; bottom:0; left:0; right:0; background:#fff; border-top:1px solid var(--border); z-index:9999; padding:8px 10px; justify-content:space-around; align-items:center; box-shadow:0 -4px 12px rgba(0,0,0,0.1); }
-  .mobile-cta-bar a { flex:1; text-align:center; padding:10px 4px; border-radius:8px; font-weight:700; font-size:13.5px; color:#fff; margin:0 3px; display:flex; align-items:center; justify-content:center; gap:5px; text-decoration:none; white-space:nowrap; }
+  .mobile-cta-bar { display:none; position:fixed; bottom:0; left:0; right:0; background:#fff; border-top:1px solid var(--border); z-index:9999; padding:8px 10px; justify-content:space-around; align-items:center; }
+  .mobile-cta-bar a { flex:1; text-align:center; padding:10px 4px; border-radius:8px; font-weight:700; font-size:13.5px; color:#fff; margin:0 3px; display:flex; align-items:center; justify-content:center; gap:5px; text-decoration:none; }
   .mobile-cta-bar .m-call { background:#d32f2f; }
   .mobile-cta-bar .m-zalo { background:#0068ff; }
   .mobile-cta-bar .m-chat { background:#0b1f3a; color:#ffcc00; border:1px solid rgba(255,204,0,0.4); }
 
   @media (max-width:768px) {
-    .site-header nav { display:none; position:absolute; top:100%; left:0; right:0; background:#fff; flex-direction:column; padding:15px 24px; box-shadow:0 4px 12px rgba(0,0,0,.1); border-top:1px solid var(--border); }
-    .site-header nav.active { display:flex; }
-    .menu-toggle { display:block; }
+    .site-header nav { display:none; }
     .site-header .contact { display:none !important; }
     .mobile-cta-bar { display:flex; }
   }
-
-  .breadcrumb { max-width:1200px; margin:16px auto 0; padding:0 20px; font-size:14px; color:var(--text-muted); }
-  .breadcrumb a { color:var(--brand-blue); }
+  .breadcrumb { max-width:1200px; margin:16px auto 0; padding:0 20px; font-size:14px; color:#666; }
   .container { max-width:1200px; margin:0 auto; padding:24px 20px; }
-
-  .home-category-section { background:#fff; border-radius:var(--radius); padding:24px; margin-bottom:30px; border:1px solid var(--border); }
-  .section-header { display:flex; justify-content:space-between; align-items:center; margin-bottom:20px; border-bottom:2px solid var(--bg-light); padding-bottom:12px; }
-  .section-title { font-size:20px; font-weight:700; color:var(--text-dark); display:flex; align-items:center; gap:8px; }
-  .section-title::before { content:''; display:inline-block; width:6px; height:20px; background:var(--brand-red); border-radius:3px; }
-  .view-all-link { font-size:14px; font-weight:600; color:var(--brand-blue); }
-
-  .grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(260px,1fr)); gap:24px; }
-  .product-card { background:#fff; border:1px solid var(--border); border-radius:var(--radius); padding:14px; transition:transform .2s; display:flex; flex-direction:column; justify-content:space-between; }
-  .product-card:hover { transform:translateY(-4px); box-shadow:0 10px 20px rgba(0,0,0,.08); }
-  .product-card img { width:100%; height:240px; object-fit:contain; background:#fff; border-radius:8px; margin-bottom:12px; padding:6px; }
-  .product-card h3 { font-size:15px; font-weight:600; color:var(--text-dark); margin-bottom:10px; min-height:44px; overflow:hidden; }
-  .product-card .card-footer { display:flex; justify-content:space-between; align-items:center; margin-top:auto; padding-top:10px; border-top:1px dashed var(--border); }
-  .product-card .price { color:var(--brand-red); font-weight:800; font-size:17px; }
-  .product-card .btn-buy { background:#eff6ff; color:var(--brand-blue); padding:6px 12px; border-radius:6px; font-size:13px; font-weight:700; }
-
-  .site-footer { background:#0f172a; color:#cbd5e1; padding:40px 20px 20px; font-size:14px; margin-top:40px; }
-  .footer-container { max-width:1200px; margin:0 auto; display:grid; grid-template-columns:repeat(auto-fit, minmax(280px, 1fr)); gap:30px; margin-bottom:30px; }
-  .footer-col h3 { color:#fff; font-size:16px; margin-bottom:14px; border-bottom:2px solid var(--brand-red); padding-bottom:6px; display:inline-block; }
-  .footer-col p { margin-bottom:8px; line-height:1.6; }
-  .footer-bottom { text-align:center; border-top:1px solid #1e293b; padding-top:20px; font-size:13px; color:#94a3b8; }
-  </style>
-</head><body>
-
+  .site-footer { background:#0f172a; color:#cbd5e1; padding:30px 20px; font-size:14px; margin-top:40px; text-align:center; }
+  </style></head><body>
+  
   <header class="site-header">
-    <a class="logo" href="https://denmodule.thanhdatled.com/"><img src="https://tdllighting.com/wp-content/uploads/2022/09/tdl-thanhdatled-1.png" alt="Thanh Dat LED"></a>
-    <button class="menu-toggle" onclick="document.querySelector('.site-header nav').classList.toggle('active')">☰</button>
-    <nav>
-      <a href="https://denmodule.thanhdatled.com/">Trang chủ</a>
-      <a href="/danh-muc/den-pha-module-philips/">Đèn Pha Module Philips</a><a href="/danh-muc/den-pha-module-khung-hop/">Đèn Pha Module Khung Hộp</a><a href="/danh-muc/den-pha-module-san-tennis/">Đèn Pha Module Sân Tennis</a><a href="/danh-muc/den-pha-module-san-pickleball/">Đèn Pha Module Sân Pickleball</a><a href="/danh-muc/den-pha-module-san-cau-long/">Đèn Pha Module Sân Cầu Lông</a>
-    </nav>
+    <a class="logo" href="https://denmodule.thanhdatled.com/"><img src="https://tdllighting.com/wp-content/uploads/2022/09/tdl-thanhdatled-1.png" alt="Logo"></a>
+    <nav><a href="/danh-muc/den-pha-module-philips/">Đèn Pha Module Philips</a><a href="/danh-muc/den-pha-module-khung-hop/">Đèn Pha Module Khung Hộp</a><a href="/danh-muc/den-pha-module-san-tennis/">Đèn Pha Module Sân Tennis</a><a href="/danh-muc/den-pha-module-san-pickleball/">Đèn Pha Module Sân Pickleball</a><a href="/danh-muc/den-pha-module-san-cau-long/">Đèn Pha Module Sân Cầu Lông</a></nav>
     <div class="contact">
       <a class="hotline" href="tel:0986474671">📞 0986474671</a>
       <a class="zalo" href="https://zalo.me/0986474671" target="_blank">💬 Zalo</a>
       <a class="ai-chat-btn" href="https://khuyenmai.thanhdatled.com/tdl-chatbot/" target="_blank">🤖 Chat AI 24/7</a>
     </div>
   </header>
-<div class="breadcrumb"><a href="https://denmodule.thanhdatled.com/">Trang chủ</a> &raquo; Đèn Pha Module Philips</div>
-<div class="container">
-  <h2 class="section-title" style="margin-bottom:20px;">Đèn Pha Module Philips (11)</h2>
-  <div class="grid">
-  <a class="product-card" href="/san-pham/den-pha-led-module-50w-philips/">
-    <div>
-      <img src="https://img.thanhdatshop.com/den-pha-led/den-pha-led-khung-hop-smd/TDLF-MKH50/anh-that-truoc-01.jpg" alt="Đèn pha led module 50w philips">
-      <h3>Đèn pha led module 50w philips</h3>
-    </div>
-    <div class="card-footer">
-      <div class="price">810.000 đ</div>
-      <span class="btn-buy">Chi tiết &rarr;</span>
+  <div class="container">
+    <h2 style="margin-bottom:20px; font-size:22px;">Đèn Pha Module Philips</h2>
+    <div style="display:grid; grid-template-columns:repeat(auto-fill,minmax(250px,1fr)); gap:20px;">
+  <a class="product-card" href="/san-pham/den-pha-led-module-50w-philips/" style="background:#fff; border:1px solid #e2e8f0; border-radius:12px; padding:14px; display:flex; flex-direction:column;">
+    <img src="https://img.thanhdatshop.com/den-pha-led/den-pha-led-khung-hop-smd/TDLF-MKH50/anh-that-truoc-01.jpg" alt="Đèn pha led module 50w philips" style="width:100%; height:200px; object-fit:contain; margin-bottom:12px;">
+    <h3 style="font-size:15px; color:#222; margin-bottom:10px; min-height:40px;">Đèn pha led module 50w philips</h3>
+    <div style="margin-top:auto; display:flex; justify-content:space-between; align-items:center;">
+      <span style="color:#d32f2f; font-weight:800; font-size:16px;">810.000 đ</span>
+      <span style="color:#0068ff; font-weight:700; font-size:13px;">Chi tiết &rarr;</span>
     </div>
   </a>
-  <a class="product-card" href="/san-pham/den-pha-led-module-100w-philips/">
-    <div>
-      <img src="https://img.thanhdatshop.com/den-pha-led/den-pha-led-khung-hop-smd/TDLF-MKH100/anh-that-truoc-01.jpg" alt="Đèn pha led module 100w philips">
-      <h3>Đèn pha led module 100w philips</h3>
-    </div>
-    <div class="card-footer">
-      <div class="price">1.020.000 đ</div>
-      <span class="btn-buy">Chi tiết &rarr;</span>
+  <a class="product-card" href="/san-pham/den-pha-led-module-100w-philips/" style="background:#fff; border:1px solid #e2e8f0; border-radius:12px; padding:14px; display:flex; flex-direction:column;">
+    <img src="https://img.thanhdatshop.com/den-pha-led/den-pha-led-khung-hop-smd/TDLF-MKH100/anh-that-truoc-01.jpg" alt="Đèn pha led module 100w philips" style="width:100%; height:200px; object-fit:contain; margin-bottom:12px;">
+    <h3 style="font-size:15px; color:#222; margin-bottom:10px; min-height:40px;">Đèn pha led module 100w philips</h3>
+    <div style="margin-top:auto; display:flex; justify-content:space-between; align-items:center;">
+      <span style="color:#d32f2f; font-weight:800; font-size:16px;">1.020.000 đ</span>
+      <span style="color:#0068ff; font-weight:700; font-size:13px;">Chi tiết &rarr;</span>
     </div>
   </a>
-  <a class="product-card" href="/san-pham/den-pha-led-module-150w-philips/">
-    <div>
-      <img src="https://img.thanhdatshop.com/den-pha-led/den-pha-led-khung-hop-smd/TDLF-MKHN100/anh-that-truoc-01.jpg" alt="Đèn pha led module 150w philips">
-      <h3>Đèn pha led module 150w philips</h3>
-    </div>
-    <div class="card-footer">
-      <div class="price">1.230.000 đ</div>
-      <span class="btn-buy">Chi tiết &rarr;</span>
+  <a class="product-card" href="/san-pham/den-pha-led-module-150w-philips/" style="background:#fff; border:1px solid #e2e8f0; border-radius:12px; padding:14px; display:flex; flex-direction:column;">
+    <img src="https://img.thanhdatshop.com/den-pha-led/den-pha-led-khung-hop-smd/TDLF-MKHN100/anh-that-truoc-01.jpg" alt="Đèn pha led module 150w philips" style="width:100%; height:200px; object-fit:contain; margin-bottom:12px;">
+    <h3 style="font-size:15px; color:#222; margin-bottom:10px; min-height:40px;">Đèn pha led module 150w philips</h3>
+    <div style="margin-top:auto; display:flex; justify-content:space-between; align-items:center;">
+      <span style="color:#d32f2f; font-weight:800; font-size:16px;">1.230.000 đ</span>
+      <span style="color:#0068ff; font-weight:700; font-size:13px;">Chi tiết &rarr;</span>
     </div>
   </a>
-  <a class="product-card" href="/san-pham/den-pha-led-module-200w-philips/">
-    <div>
-      <img src="https://img.thanhdatshop.com/den-pha-led/den-pha-led-khung-hop-smd/TDLF-MKH150/anh-that-truoc-01.jpg" alt="Đèn pha led module 200w philips">
-      <h3>Đèn pha led module 200w philips</h3>
-    </div>
-    <div class="card-footer">
-      <div class="price">1.440.000 đ</div>
-      <span class="btn-buy">Chi tiết &rarr;</span>
+  <a class="product-card" href="/san-pham/den-pha-led-module-200w-philips/" style="background:#fff; border:1px solid #e2e8f0; border-radius:12px; padding:14px; display:flex; flex-direction:column;">
+    <img src="https://img.thanhdatshop.com/den-pha-led/den-pha-led-khung-hop-smd/TDLF-MKH150/anh-that-truoc-01.jpg" alt="Đèn pha led module 200w philips" style="width:100%; height:200px; object-fit:contain; margin-bottom:12px;">
+    <h3 style="font-size:15px; color:#222; margin-bottom:10px; min-height:40px;">Đèn pha led module 200w philips</h3>
+    <div style="margin-top:auto; display:flex; justify-content:space-between; align-items:center;">
+      <span style="color:#d32f2f; font-weight:800; font-size:16px;">1.440.000 đ</span>
+      <span style="color:#0068ff; font-weight:700; font-size:13px;">Chi tiết &rarr;</span>
     </div>
   </a>
-  <a class="product-card" href="/san-pham/den-pha-led-module-250w-philips/">
-    <div>
-      <img src="https://img.thanhdatshop.com/den-pha-led/den-pha-led-khung-hop-smd/TDLF-MKH200/anh-that-truoc-01.jpg" alt="Đèn pha led module 250w philips">
-      <h3>Đèn pha led module 250w philips</h3>
-    </div>
-    <div class="card-footer">
-      <div class="price">1.650.000 đ</div>
-      <span class="btn-buy">Chi tiết &rarr;</span>
+  <a class="product-card" href="/san-pham/den-pha-led-module-250w-philips/" style="background:#fff; border:1px solid #e2e8f0; border-radius:12px; padding:14px; display:flex; flex-direction:column;">
+    <img src="https://img.thanhdatshop.com/den-pha-led/den-pha-led-khung-hop-smd/TDLF-MKH200/anh-that-truoc-01.jpg" alt="Đèn pha led module 250w philips" style="width:100%; height:200px; object-fit:contain; margin-bottom:12px;">
+    <h3 style="font-size:15px; color:#222; margin-bottom:10px; min-height:40px;">Đèn pha led module 250w philips</h3>
+    <div style="margin-top:auto; display:flex; justify-content:space-between; align-items:center;">
+      <span style="color:#d32f2f; font-weight:800; font-size:16px;">1.650.000 đ</span>
+      <span style="color:#0068ff; font-weight:700; font-size:13px;">Chi tiết &rarr;</span>
     </div>
   </a>
-  <a class="product-card" href="/san-pham/den-pha-led-module-300w-philips/">
-    <div>
-      <img src="https://img.thanhdatshop.com/den-pha-led/den-pha-led-khung-hop-smd/TDLF-MKHN200/anh-that-truoc-01.jpg" alt="Đèn pha led module 300w philips">
-      <h3>Đèn pha led module 300w philips</h3>
-    </div>
-    <div class="card-footer">
-      <div class="price">1.860.000 đ</div>
-      <span class="btn-buy">Chi tiết &rarr;</span>
+  <a class="product-card" href="/san-pham/den-pha-led-module-300w-philips/" style="background:#fff; border:1px solid #e2e8f0; border-radius:12px; padding:14px; display:flex; flex-direction:column;">
+    <img src="https://img.thanhdatshop.com/den-pha-led/den-pha-led-khung-hop-smd/TDLF-MKHN200/anh-that-truoc-01.jpg" alt="Đèn pha led module 300w philips" style="width:100%; height:200px; object-fit:contain; margin-bottom:12px;">
+    <h3 style="font-size:15px; color:#222; margin-bottom:10px; min-height:40px;">Đèn pha led module 300w philips</h3>
+    <div style="margin-top:auto; display:flex; justify-content:space-between; align-items:center;">
+      <span style="color:#d32f2f; font-weight:800; font-size:16px;">1.860.000 đ</span>
+      <span style="color:#0068ff; font-weight:700; font-size:13px;">Chi tiết &rarr;</span>
     </div>
   </a>
-  <a class="product-card" href="/san-pham/den-pha-led-module-400w-philips/">
-    <div>
-      <img src="https://img.thanhdatshop.com/den-pha-led/den-pha-led-khung-hop-smd/TDLF-MKH300/anh-that-truoc-01.jpg" alt="Đèn pha led module 400w philips">
-      <h3>Đèn pha led module 400w philips</h3>
-    </div>
-    <div class="card-footer">
-      <div class="price">2.280.000 đ</div>
-      <span class="btn-buy">Chi tiết &rarr;</span>
+  <a class="product-card" href="/san-pham/den-pha-led-module-400w-philips/" style="background:#fff; border:1px solid #e2e8f0; border-radius:12px; padding:14px; display:flex; flex-direction:column;">
+    <img src="https://img.thanhdatshop.com/den-pha-led/den-pha-led-khung-hop-smd/TDLF-MKH300/anh-that-truoc-01.jpg" alt="Đèn pha led module 400w philips" style="width:100%; height:200px; object-fit:contain; margin-bottom:12px;">
+    <h3 style="font-size:15px; color:#222; margin-bottom:10px; min-height:40px;">Đèn pha led module 400w philips</h3>
+    <div style="margin-top:auto; display:flex; justify-content:space-between; align-items:center;">
+      <span style="color:#d32f2f; font-weight:800; font-size:16px;">2.280.000 đ</span>
+      <span style="color:#0068ff; font-weight:700; font-size:13px;">Chi tiết &rarr;</span>
     </div>
   </a>
-  <a class="product-card" href="/san-pham/den-pha-led-module-500w-philips/">
-    <div>
-      <img src="https://img.thanhdatshop.com/den-pha-led/den-pha-led-khung-hop-smd/TDLF-MKHN300/anh-that-truoc-1.jpg" alt="Đèn pha led module 500w philips">
-      <h3>Đèn pha led module 500w philips</h3>
-    </div>
-    <div class="card-footer">
-      <div class="price">2.700.000 đ</div>
-      <span class="btn-buy">Chi tiết &rarr;</span>
+  <a class="product-card" href="/san-pham/den-pha-led-module-500w-philips/" style="background:#fff; border:1px solid #e2e8f0; border-radius:12px; padding:14px; display:flex; flex-direction:column;">
+    <img src="https://img.thanhdatshop.com/den-pha-led/den-pha-led-khung-hop-smd/TDLF-MKHN300/anh-that-truoc-1.jpg" alt="Đèn pha led module 500w philips" style="width:100%; height:200px; object-fit:contain; margin-bottom:12px;">
+    <h3 style="font-size:15px; color:#222; margin-bottom:10px; min-height:40px;">Đèn pha led module 500w philips</h3>
+    <div style="margin-top:auto; display:flex; justify-content:space-between; align-items:center;">
+      <span style="color:#d32f2f; font-weight:800; font-size:16px;">2.700.000 đ</span>
+      <span style="color:#0068ff; font-weight:700; font-size:13px;">Chi tiết &rarr;</span>
     </div>
   </a>
-  <a class="product-card" href="/san-pham/den-pha-led-module-600w-philips/">
-    <div>
-      <img src="https://img.thanhdatshop.com/den-pha-led/den-pha-led-khung-hop-smd/TDLF-MKH400/anh-that-truoc-01.jpg" alt="Đèn pha led module 600w philips">
-      <h3>Đèn pha led module 600w philips</h3>
-    </div>
-    <div class="card-footer">
-      <div class="price">3.120.000 đ</div>
-      <span class="btn-buy">Chi tiết &rarr;</span>
+  <a class="product-card" href="/san-pham/den-pha-led-module-600w-philips/" style="background:#fff; border:1px solid #e2e8f0; border-radius:12px; padding:14px; display:flex; flex-direction:column;">
+    <img src="https://img.thanhdatshop.com/den-pha-led/den-pha-led-khung-hop-smd/TDLF-MKH400/anh-that-truoc-01.jpg" alt="Đèn pha led module 600w philips" style="width:100%; height:200px; object-fit:contain; margin-bottom:12px;">
+    <h3 style="font-size:15px; color:#222; margin-bottom:10px; min-height:40px;">Đèn pha led module 600w philips</h3>
+    <div style="margin-top:auto; display:flex; justify-content:space-between; align-items:center;">
+      <span style="color:#d32f2f; font-weight:800; font-size:16px;">3.120.000 đ</span>
+      <span style="color:#0068ff; font-weight:700; font-size:13px;">Chi tiết &rarr;</span>
     </div>
   </a>
-  <a class="product-card" href="/san-pham/den-pha-led-module-800w-philips/">
-    <div>
-      <img src="https://img.thanhdatshop.com/den-pha-led/den-pha-led-khung-hop-smd/TDLF-MKH500/anh-that-truoc-01.jpg" alt="Đèn pha led module 800w philips">
-      <h3>Đèn pha led module 800w philips</h3>
-    </div>
-    <div class="card-footer">
-      <div class="price">3.960.000 đ</div>
-      <span class="btn-buy">Chi tiết &rarr;</span>
+  <a class="product-card" href="/san-pham/den-pha-led-module-800w-philips/" style="background:#fff; border:1px solid #e2e8f0; border-radius:12px; padding:14px; display:flex; flex-direction:column;">
+    <img src="https://img.thanhdatshop.com/den-pha-led/den-pha-led-khung-hop-smd/TDLF-MKH500/anh-that-truoc-01.jpg" alt="Đèn pha led module 800w philips" style="width:100%; height:200px; object-fit:contain; margin-bottom:12px;">
+    <h3 style="font-size:15px; color:#222; margin-bottom:10px; min-height:40px;">Đèn pha led module 800w philips</h3>
+    <div style="margin-top:auto; display:flex; justify-content:space-between; align-items:center;">
+      <span style="color:#d32f2f; font-weight:800; font-size:16px;">3.960.000 đ</span>
+      <span style="color:#0068ff; font-weight:700; font-size:13px;">Chi tiết &rarr;</span>
     </div>
   </a>
-  <a class="product-card" href="/san-pham/den-pha-led-module-1000w-philips/">
-    <div>
-      <img src="https://img.thanhdatshop.com/den-pha-led/den-pha-led-khung-hop-smd/TDLF-MKH600/anh-that-truoc-01.jpg" alt="Đèn pha led module 1000w philips">
-      <h3>Đèn pha led module 1000w philips</h3>
-    </div>
-    <div class="card-footer">
-      <div class="price">4.800.000 đ</div>
-      <span class="btn-buy">Chi tiết &rarr;</span>
+  <a class="product-card" href="/san-pham/den-pha-led-module-1000w-philips/" style="background:#fff; border:1px solid #e2e8f0; border-radius:12px; padding:14px; display:flex; flex-direction:column;">
+    <img src="https://img.thanhdatshop.com/den-pha-led/den-pha-led-khung-hop-smd/TDLF-MKH600/anh-that-truoc-01.jpg" alt="Đèn pha led module 1000w philips" style="width:100%; height:200px; object-fit:contain; margin-bottom:12px;">
+    <h3 style="font-size:15px; color:#222; margin-bottom:10px; min-height:40px;">Đèn pha led module 1000w philips</h3>
+    <div style="margin-top:auto; display:flex; justify-content:space-between; align-items:center;">
+      <span style="color:#d32f2f; font-weight:800; font-size:16px;">4.800.000 đ</span>
+      <span style="color:#0068ff; font-weight:700; font-size:13px;">Chi tiết &rarr;</span>
     </div>
   </a></div>
-</div>
-
+  </div>
+  
   <footer class="site-footer">
-    <div class="footer-container">
-      <div class="footer-col">
-        <h3>CÔNG TY TNHH TM & DV THÀNH ĐẠT LED</h3>
-        <p><strong>Địa chỉ:</strong> 364 Ngô Quyền – La Khê – Hà Đông – Hà Nội.</p>
-        <p><strong>Điện thoại:</strong> 0986.474.671 - 0867.330.396 - 0867.224.396 - 0867.933.396</p>
-      </div>
-      <div class="footer-col">
-        <h3>HỆ THỐNG WEBSITE</h3>
-        <p><a href="https://thanhdatled.com">thanhdatled.com</a></p>
-        <p><a href="https://tdllighting.com">tdllighting.com</a></p>
-        <p><a href="https://thanhdatelectric.com">thanhdatelectric.com</a></p>
-      </div>
-    </div>
-    <div class="footer-bottom">
-      <p>&copy; 2026 Thành Đạt LED. All rights reserved.</p>
-    </div>
+    <p>&copy; 2026 Thành Đạt LED. All rights reserved.</p>
   </footer>
-
-  <!-- THANH CÔNG CỤ DI ĐỘNG CHUẨN 3 NÚT -->
+  <a href="https://khuyenmai.thanhdatled.com/tdl-chatbot/" target="_blank" class="floating-chatbot-btn">
+    <div class="floating-chatbot-icon">🤖</div>
+    <div>
+      <div style="font-size:11px; color:#ffcc00; font-weight:700;">TƯ VẤN 24/7</div>
+      <div>Chat AI Báo Giá Sỉ</div>
+    </div>
+  </a>
   <div class="mobile-cta-bar">
     <a class="m-call" href="tel:0986474671">📞 Gọi ngay</a>
     <a class="m-zalo" href="https://zalo.me/0986474671" target="_blank">💬 Nhắn Zalo</a>
     <a class="m-chat" href="https://khuyenmai.thanhdatled.com/tdl-chatbot/" target="_blank">🤖 Chat AI</a>
-  </div>
-</body></html>
+  </div></body></html>
