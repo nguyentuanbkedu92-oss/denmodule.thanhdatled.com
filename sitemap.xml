@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url><loc>https://denmodule.thanhdatled.com/</loc></url>
+  <url><loc>https://denmodule.thanhdatled.com/bai-viet/</loc></url>
   <url><loc>https://denmodule.thanhdatled.com/danh-muc/den-pha-module-philips/</loc></url>
   <url><loc>https://denmodule.thanhdatled.com/danh-muc/den-pha-module-khung-hop/</loc></url>
   <url><loc>https://denmodule.thanhdatled.com/danh-muc/den-pha-module-san-tennis/</loc></url>
@@ -59,6 +60,11 @@
   <url><loc>https://denmodule.thanhdatled.com/san-pham/den-pha-led-module-200w-san-cau-long/</loc></url>
   <url><loc>https://denmodule.thanhdatled.com/san-pham/den-pha-led-module-250w-san-cau-long/</loc></url>
   <url><loc>https://denmodule.thanhdatled.com/san-pham/den-pha-led-module-300w-san-cau-long/</loc></url>
+  <url><loc>https://denmodule.thanhdatled.com/san-pham/den-pha-led-module-400w-san-cau-long/</loc></url>
+  <url><loc>https://denmodule.thanhdatled.com/san-pham/den-pha-led-module-500w-san-cau-long/</loc></url>
+  <url><loc>https://denmodule.thanhdatled.com/san-pham/den-pha-led-module-600w-san-cau-long/</loc></url>
+  <url><loc>https://denmodule.thanhdatled.com/san-pham/den-pha-led-module-800w-san-cau-long/</loc></url>
+  <url><loc>https://denmodule.thanhdatled.com/san-pham/den-pha-led-module-1000w-san-cau-long/</loc></url>
   <url><loc>https://denmodule.thanhdatled.com/san-pham/den-pha-led-module-san-bong-50w/</loc></url>
   <url><loc>https://denmodule.thanhdatled.com/san-pham/den-pha-led-module-san-bong-100w/</loc></url>
   <url><loc>https://denmodule.thanhdatled.com/san-pham/den-pha-led-module-san-bong-150w/</loc></url>
@@ -82,4 +88,5 @@
   <url><loc>https://denmodule.thanhdatled.com/san-pham/den-pha-led-module-san-bong-chuyen-600w/</loc></url>
   <url><loc>https://denmodule.thanhdatled.com/san-pham/den-pha-led-module-san-bong-chuyen-800w/</loc></url>
   <url><loc>https://denmodule.thanhdatled.com/san-pham/den-pha-led-module-san-bong-chuyen-1000w/</loc></url>
+  <url><loc>https://denmodule.thanhdatled.com/bai-viet/den-pha-led-module-50w-khung-hop/</loc></url>
 </urlset>
