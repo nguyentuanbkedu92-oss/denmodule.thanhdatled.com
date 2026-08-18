@@ -26,16 +26,27 @@
   a { text-decoration:none; color:var(--brand-blue); }
   h1,h2,h3 { line-height:1.35; }
 
-  .site-header { position:sticky; top:0; z-index:1000; background:#fff; border-bottom:1px solid var(--border); padding:12px 24px; display:flex; align-items:center; justify-content:space-between; }
-  .site-header .logo { display:flex; align-items:center; gap:10px; }
+  .site-header { position:sticky; top:0; z-index:1000; background:#fff; border-bottom:1px solid var(--border); padding:12px 24px; display:flex; align-items:center; justify-content:space-between; gap:16px; }
+  .site-header .logo { display:flex; align-items:center; gap:10px; flex-shrink:0; }
   .site-header .logo img { height:44px; width:auto; object-fit:contain; }
-  .site-header .logo .brand-name { font-size:18px; font-weight:800; color:#0f172a; letter-spacing:-0.3px; }
-  .site-header nav { display:flex; gap:20px; font-weight:600; font-size:14.5px; align-items:center; }
-  .site-header nav a { padding:6px 10px; border-radius:6px; color:#222; }
-  .site-header .contact { display:flex; gap:12px; align-items:center; }
-  .site-header .contact a { padding:8px 16px; border-radius:8px; font-weight:700; font-size:14px; display:flex; align-items:center; gap:6px; color:#fff; }
+  .site-header .logo .brand-name { font-size:18px; font-weight:800; color:#0f172a; letter-spacing:-0.3px; white-space:nowrap; }
+  .site-header nav.desktop-nav { display:flex; gap:6px; font-weight:600; font-size:14.5px; align-items:center; flex-wrap:nowrap; white-space:nowrap; }
+  .site-header nav a { padding:8px 12px; border-radius:6px; color:#222; }
+  .site-header nav a:hover { background:#f4f6f9; }
+  .site-header .contact { display:flex; gap:12px; align-items:center; flex-shrink:0; }
+  .site-header .contact a { padding:8px 16px; border-radius:8px; font-weight:700; font-size:14px; display:flex; align-items:center; gap:6px; color:#fff; white-space:nowrap; }
   .site-header .contact .hotline { background:var(--brand-red); }
   .site-header .contact .zalo { background:var(--brand-blue); }
+
+  /* DROPDOWN "DANH MỤC SẢN PHẨM" TRÊN DESKTOP — GIỮ MENU GỌN 1 DÒNG DÙ CÓ NHIỀU DANH MỤC */
+  .nav-dropdown { position:relative; }
+  .nav-dropdown-trigger { cursor:pointer; padding:8px 12px; border-radius:6px; color:#222; font-weight:600; font-size:14.5px; display:inline-flex; align-items:center; gap:4px; }
+  .nav-dropdown-trigger:hover { background:#f4f6f9; }
+  .nav-dropdown-panel { display:none; flex-direction:column; position:absolute; top:100%; left:0; background:#fff; border:1px solid var(--border); border-radius:10px; box-shadow:0 10px 28px rgba(0,0,0,0.14); padding:8px; min-width:230px; max-height:70vh; overflow-y:auto; z-index:1001; }
+  .nav-dropdown-panel a { padding:9px 12px; border-radius:6px; font-size:14px; font-weight:600; color:#222; white-space:normal; }
+  .nav-dropdown-panel a:hover { background:#f4f6f9; }
+  .nav-dropdown:hover .nav-dropdown-panel,
+  .nav-dropdown:focus-within .nav-dropdown-panel { display:flex; }
 
   /* CHATBOT NỔI GÓC PHẢI CHỈ HIỆN TRÊN MÁY TÍNH (PC) */
   .floating-chatbot-btn { position:fixed; bottom:24px; right:24px; z-index:9998; background:linear-gradient(135deg,#0b1f3a,#1a5fa8); color:#fff; display:flex; align-items:center; gap:10px; padding:10px 18px 10px 10px; border-radius:50px; box-shadow:0 4px 20px rgba(0,0,0,0.25); text-decoration:none; font-weight:600; font-size:14px; border:1px solid rgba(255,204,0,0.4); }
@@ -84,14 +95,20 @@
       <img src="https://tdllighting.com/wp-content/uploads/2022/09/tdl-thanhdatled-1.png" alt="Thanh Dat LED" width="44" height="44">
       <span class="brand-name">Thanh Dat LED</span>
     </a>
-    <nav class="desktop-nav"><a href="/danh-muc/den-pha-module-philips/">Đèn Pha Module Philips</a><a href="/danh-muc/den-pha-module-khung-hop/">Đèn Pha Module Khung Hộp</a><a href="/danh-muc/den-pha-module-san-tennis/">Đèn Pha Module Sân Tennis</a><a href="/danh-muc/den-pha-module-san-pickleball/">Đèn Pha Module Sân Pickleball</a><a href="/danh-muc/den-pha-module-san-cau-long/">Đèn Pha Module Sân Cầu Lông</a><a href="/danh-muc/den-pha-module-san-bong-da/">Đèn Pha Module Sân Bóng Đá</a><a href="/bai-viet/">Bài viết</a></nav>
+    <nav class="desktop-nav">
+      <div class="nav-dropdown" tabindex="0">
+        <span class="nav-dropdown-trigger">Danh mục sản phẩm ▾</span>
+        <div class="nav-dropdown-panel"><a href="/danh-muc/den-pha-module-philips/">Đèn Pha Module Philips</a><a href="/danh-muc/den-pha-module-khung-hop/">Đèn Pha Module Khung Hộp</a><a href="/danh-muc/den-pha-module-san-tennis/">Đèn Pha Module Sân Tennis</a><a href="/danh-muc/den-pha-module-san-pickleball/">Đèn Pha Module Sân Pickleball</a><a href="/danh-muc/den-pha-module-san-cau-long/">Đèn Pha Module Sân Cầu Lông</a><a href="/danh-muc/den-pha-module-san-bong-da/">Đèn Pha Module Sân Bóng Đá</a><a href="/danh-muc/den-pha-module-san-bong-chuyen/">Đèn Pha Module Sân Bóng Chuyền</a></div>
+      </div>
+      <a href="/bai-viet/">Bài viết</a>
+    </nav>
     <button class="menu-toggle" aria-label="Mở menu" onclick="document.getElementById('mobileNav').classList.toggle('open')">☰</button>
     <div class="contact">
       <a class="hotline" href="tel:0986474671">📞 0986474671</a>
       <a class="zalo" href="https://zalo.me/0986474671" target="_blank" rel="noopener">💬 Zalo</a>
     </div>
   </header>
-  <nav id="mobileNav" class="mobile-nav"><a href="/danh-muc/den-pha-module-philips/">Đèn Pha Module Philips</a><a href="/danh-muc/den-pha-module-khung-hop/">Đèn Pha Module Khung Hộp</a><a href="/danh-muc/den-pha-module-san-tennis/">Đèn Pha Module Sân Tennis</a><a href="/danh-muc/den-pha-module-san-pickleball/">Đèn Pha Module Sân Pickleball</a><a href="/danh-muc/den-pha-module-san-cau-long/">Đèn Pha Module Sân Cầu Lông</a><a href="/danh-muc/den-pha-module-san-bong-da/">Đèn Pha Module Sân Bóng Đá</a><a href="/bai-viet/">Bài viết</a></nav>
+  <nav id="mobileNav" class="mobile-nav"><a href="/danh-muc/den-pha-module-philips/">Đèn Pha Module Philips</a><a href="/danh-muc/den-pha-module-khung-hop/">Đèn Pha Module Khung Hộp</a><a href="/danh-muc/den-pha-module-san-tennis/">Đèn Pha Module Sân Tennis</a><a href="/danh-muc/den-pha-module-san-pickleball/">Đèn Pha Module Sân Pickleball</a><a href="/danh-muc/den-pha-module-san-cau-long/">Đèn Pha Module Sân Cầu Lông</a><a href="/danh-muc/den-pha-module-san-bong-da/">Đèn Pha Module Sân Bóng Đá</a><a href="/danh-muc/den-pha-module-san-bong-chuyen/">Đèn Pha Module Sân Bóng Chuyền</a><a href="/bai-viet/">Bài viết</a></nav>
 <div class="breadcrumb"><a href="https://denmodule.thanhdatled.com/">Trang chủ</a> &raquo; Đèn Pha Module Sân Pickleball</div>
 <div class="container">
   <h1 style="margin-bottom:20px; font-size:22px;">Đèn Pha Module Sân Pickleball</h1>
