@@ -38,7 +38,7 @@
   .site-header .contact .hotline { background:var(--brand-red); }
   .site-header .contact .zalo { background:var(--brand-blue); }
 
-  /* DROPDOWN "DANH MỤC SẢN PHẨM" TRÊN DESKTOP — GIỮ MENU GỌN 1 DÒNG DÙ CÓ NHIỀU DANH MỤC */
+  /* DROPDOWN "DANH MỤC SẢN PHẨM" TRÊN DESKTOP */
   .nav-dropdown { position:relative; }
   .nav-dropdown-trigger { cursor:pointer; padding:8px 12px; border-radius:6px; color:#222; font-weight:600; font-size:14.5px; display:inline-flex; align-items:center; gap:4px; }
   .nav-dropdown-trigger:hover { background:#f4f6f9; }
@@ -48,18 +48,17 @@
   .nav-dropdown:hover .nav-dropdown-panel,
   .nav-dropdown:focus-within .nav-dropdown-panel { display:flex; }
 
-  /* CHATBOT NỔI GÓC PHẢI CHỈ HIỆN TRÊN MÁY TÍNH (PC) */
+  /* CHATBOT NỔI GÓC PHẢI */
   .floating-chatbot-btn { position:fixed; bottom:24px; right:24px; z-index:9998; background:linear-gradient(135deg,#0b1f3a,#1a5fa8); color:#fff; display:flex; align-items:center; gap:10px; padding:10px 18px 10px 10px; border-radius:50px; box-shadow:0 4px 20px rgba(0,0,0,0.25); text-decoration:none; font-weight:600; font-size:14px; border:1px solid rgba(255,204,0,0.4); }
   .floating-chatbot-icon { width:36px; height:36px; background:#ffcc00; border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:18px; color:#0b1f3a; }
 
-  /* THANH DI ĐỘNG DƯỚI CÙNG CHỈ HIỆN TRÊN ĐIỆN THOẠI: ZALO - GỌI NGAY - CHAT AI */
+  /* THANH DI ĐỘNG DƯỚI CÙNG */
   .mobile-cta-bar { display:none; position:fixed; bottom:0; left:0; right:0; background:#fff; border-top:1px solid var(--border); z-index:9999; padding:8px 10px; justify-content:space-around; align-items:center; box-shadow:0 -4px 12px rgba(0,0,0,0.1); }
   .mobile-cta-bar a { flex:1; text-align:center; padding:10px 4px; border-radius:8px; font-weight:700; font-size:13.5px; color:#fff; margin:0 3px; display:flex; align-items:center; justify-content:center; gap:5px; text-decoration:none; }
   .mobile-cta-bar .m-zalo { background:#0068ff; }
   .mobile-cta-bar .m-call { background:#d32f2f; }
   .mobile-cta-bar .m-chat { background:#0b1f3a; color:#ffcc00; border:1px solid rgba(255,204,0,0.4); }
 
-  /* NÚT MỞ MENU (HAMBURGER) CHỈ HIỆN TRÊN MOBILE */
   .menu-toggle { display:none; background:none; border:none; font-size:24px; line-height:1; cursor:pointer; color:#222; padding:4px 8px; }
   .mobile-nav { display:none; flex-direction:column; background:#fff; border-bottom:1px solid var(--border); position:sticky; top:70px; z-index:999; }
   .mobile-nav.open { display:flex; }
@@ -76,7 +75,6 @@
   @media (min-width:769px) {
     .mobile-nav { display:none !important; }
   }
-
   @media (min-width:769px) {
     .mobile-cta-bar { display:none !important; }
     .floating-chatbot-btn { display:flex !important; }
@@ -85,7 +83,6 @@
   .breadcrumb { max-width:1200px; margin:16px auto 0; padding:0 20px; font-size:13.5px; color:#666; }
   .breadcrumb a { color:#666; }
   .container { max-width:1200px; margin:0 auto; padding:24px 20px; }
-  .site-footer { background:#0f172a; color:#cbd5e1; padding:30px 20px; font-size:14px; margin-top:40px; text-align:center; }
   </style>
 </head>
 <body>
@@ -100,6 +97,7 @@
         <span class="nav-dropdown-trigger">Danh mục sản phẩm ▾</span>
         <div class="nav-dropdown-panel"><a href="/danh-muc/den-pha-module-philips/" style="padding-left:24px; font-size:14px; background:#f8fafc; border-bottom:1px solid #f0f0f0;">- Đèn Pha Module Philips</a><a href="/danh-muc/den-pha-module-khung-hop/" style="padding-left:24px; font-size:14px; background:#f8fafc; border-bottom:1px solid #f0f0f0;">- Đèn Pha Module Khung Hộp</a><a href="/danh-muc/den-pha-module-san-tennis/" style="padding-left:24px; font-size:14px; background:#f8fafc; border-bottom:1px solid #f0f0f0;">- Đèn Pha Module Sân Tennis</a><a href="/danh-muc/den-pha-module-san-pickleball/" style="padding-left:24px; font-size:14px; background:#f8fafc; border-bottom:1px solid #f0f0f0;">- Đèn Pha Module Sân Pickleball</a><a href="/danh-muc/den-pha-module-san-cau-long/" style="padding-left:24px; font-size:14px; background:#f8fafc; border-bottom:1px solid #f0f0f0;">- Đèn Pha Module Sân Cầu Lông</a><a href="/danh-muc/den-pha-module-san-bong-da/" style="padding-left:24px; font-size:14px; background:#f8fafc; border-bottom:1px solid #f0f0f0;">- Đèn Pha Module Sân Bóng Đá</a><a href="/danh-muc/den-pha-module-san-bong-chuyen/" style="padding-left:24px; font-size:14px; background:#f8fafc; border-bottom:1px solid #f0f0f0;">- Đèn Pha Module Sân Bóng Chuyền</a><a href="/danh-muc/den-pha-module-san-bong-ro/" style="padding-left:24px; font-size:14px; background:#f8fafc; border-bottom:1px solid #f0f0f0;">- Đèn Pha Module Sân Bóng Rổ</a><a href="/danh-muc/den-pha-module-san-golf/" style="padding-left:24px; font-size:14px; background:#f8fafc; border-bottom:1px solid #f0f0f0;">- Đèn Pha Module Sân Golf</a><a href="/danh-muc/den-pha-module-san-the-thao/" style="padding-left:24px; font-size:14px; background:#f8fafc; border-bottom:1px solid #f0f0f0;">- Đèn Pha Module Sân Thể Thao</a><a href="/danh-muc/den-pha-module-nha-xuong/" style="padding-left:24px; font-size:14px; background:#f8fafc; border-bottom:1px solid #f0f0f0;">- Đèn Pha Module Nhà Xưởng</a><a href="/danh-muc/den-pha-module-kho-xuong/" style="padding-left:24px; font-size:14px; background:#f8fafc; border-bottom:1px solid #f0f0f0;">- Đèn Pha Module Kho Xưởng</a><a href="/danh-muc/den-pha-module-ngoai-troi/" style="padding-left:24px; font-size:14px; background:#f8fafc; border-bottom:1px solid #f0f0f0;">- Đèn Pha Module Ngoài Trời</a><a href="/danh-muc/den-pha-module-chieu-sang-cong-trinh/" style="padding-left:24px; font-size:14px; background:#f8fafc; border-bottom:1px solid #f0f0f0;">- Đèn Pha Module Chiếu Sáng Công Trình</a><a href="/danh-muc/den-pha-module-chieu-sang-bai-xe/" style="padding-left:24px; font-size:14px; background:#f8fafc; border-bottom:1px solid #f0f0f0;">- Đèn Pha Module Chiếu Sáng Bãi Xe</a><a href="/danh-muc/den-pha-module-chieu-sang-san-vuon/" style="padding-left:24px; font-size:14px; background:#f8fafc; border-bottom:1px solid #f0f0f0;">- Đèn Pha Module Chiếu Sáng Sân Vườn</a><a href="/danh-muc/den-pha-module-chieu-sang-khuon-vien/" style="padding-left:24px; font-size:14px; background:#f8fafc; border-bottom:1px solid #f0f0f0;">- Đèn Pha Module Chiếu Sáng Khuôn Viên</a><a href="/danh-muc/den-pha-module-chieu-sang-duong/" style="padding-left:24px; font-size:14px; background:#f8fafc; border-bottom:1px solid #f0f0f0;">- Đèn Pha Module Chiếu Sáng Đường</a><a href="/danh-muc/den-pha-module-chieu-sang-cang/" style="padding-left:24px; font-size:14px; background:#f8fafc; border-bottom:1px solid #f0f0f0;">- Đèn Pha Module Chiếu Sáng Cảng</a><a href="/danh-muc/den-pha-module-chieu-sang-san-bay/" style="padding-left:24px; font-size:14px; background:#f8fafc; border-bottom:1px solid #f0f0f0;">- Đèn Pha Module Chiếu Sáng Sân Bay</a><a href="/danh-muc/den-pha-module-chong-choi/" style="padding-left:24px; font-size:14px; background:#f8fafc; border-bottom:1px solid #f0f0f0;">- Đèn Pha Module Chống Chói</a></div>
       </div>
+      <a href="/gioi-thieu/">Giới thiệu</a>
       <a href="/bai-viet/">Bài viết</a>
     </nav>
     <button class="menu-toggle" aria-label="Mở menu" onclick="document.getElementById('mobileNav').classList.toggle('open')">☰</button>
@@ -115,6 +113,7 @@
     <div id="mobileCategorySub" style="display:none; flex-direction:column;">
       <a href="/danh-muc/den-pha-module-philips/" style="padding-left:24px; font-size:14px; background:#f8fafc; border-bottom:1px solid #f0f0f0;">- Đèn Pha Module Philips</a><a href="/danh-muc/den-pha-module-khung-hop/" style="padding-left:24px; font-size:14px; background:#f8fafc; border-bottom:1px solid #f0f0f0;">- Đèn Pha Module Khung Hộp</a><a href="/danh-muc/den-pha-module-san-tennis/" style="padding-left:24px; font-size:14px; background:#f8fafc; border-bottom:1px solid #f0f0f0;">- Đèn Pha Module Sân Tennis</a><a href="/danh-muc/den-pha-module-san-pickleball/" style="padding-left:24px; font-size:14px; background:#f8fafc; border-bottom:1px solid #f0f0f0;">- Đèn Pha Module Sân Pickleball</a><a href="/danh-muc/den-pha-module-san-cau-long/" style="padding-left:24px; font-size:14px; background:#f8fafc; border-bottom:1px solid #f0f0f0;">- Đèn Pha Module Sân Cầu Lông</a><a href="/danh-muc/den-pha-module-san-bong-da/" style="padding-left:24px; font-size:14px; background:#f8fafc; border-bottom:1px solid #f0f0f0;">- Đèn Pha Module Sân Bóng Đá</a><a href="/danh-muc/den-pha-module-san-bong-chuyen/" style="padding-left:24px; font-size:14px; background:#f8fafc; border-bottom:1px solid #f0f0f0;">- Đèn Pha Module Sân Bóng Chuyền</a><a href="/danh-muc/den-pha-module-san-bong-ro/" style="padding-left:24px; font-size:14px; background:#f8fafc; border-bottom:1px solid #f0f0f0;">- Đèn Pha Module Sân Bóng Rổ</a><a href="/danh-muc/den-pha-module-san-golf/" style="padding-left:24px; font-size:14px; background:#f8fafc; border-bottom:1px solid #f0f0f0;">- Đèn Pha Module Sân Golf</a><a href="/danh-muc/den-pha-module-san-the-thao/" style="padding-left:24px; font-size:14px; background:#f8fafc; border-bottom:1px solid #f0f0f0;">- Đèn Pha Module Sân Thể Thao</a><a href="/danh-muc/den-pha-module-nha-xuong/" style="padding-left:24px; font-size:14px; background:#f8fafc; border-bottom:1px solid #f0f0f0;">- Đèn Pha Module Nhà Xưởng</a><a href="/danh-muc/den-pha-module-kho-xuong/" style="padding-left:24px; font-size:14px; background:#f8fafc; border-bottom:1px solid #f0f0f0;">- Đèn Pha Module Kho Xưởng</a><a href="/danh-muc/den-pha-module-ngoai-troi/" style="padding-left:24px; font-size:14px; background:#f8fafc; border-bottom:1px solid #f0f0f0;">- Đèn Pha Module Ngoài Trời</a><a href="/danh-muc/den-pha-module-chieu-sang-cong-trinh/" style="padding-left:24px; font-size:14px; background:#f8fafc; border-bottom:1px solid #f0f0f0;">- Đèn Pha Module Chiếu Sáng Công Trình</a><a href="/danh-muc/den-pha-module-chieu-sang-bai-xe/" style="padding-left:24px; font-size:14px; background:#f8fafc; border-bottom:1px solid #f0f0f0;">- Đèn Pha Module Chiếu Sáng Bãi Xe</a><a href="/danh-muc/den-pha-module-chieu-sang-san-vuon/" style="padding-left:24px; font-size:14px; background:#f8fafc; border-bottom:1px solid #f0f0f0;">- Đèn Pha Module Chiếu Sáng Sân Vườn</a><a href="/danh-muc/den-pha-module-chieu-sang-khuon-vien/" style="padding-left:24px; font-size:14px; background:#f8fafc; border-bottom:1px solid #f0f0f0;">- Đèn Pha Module Chiếu Sáng Khuôn Viên</a><a href="/danh-muc/den-pha-module-chieu-sang-duong/" style="padding-left:24px; font-size:14px; background:#f8fafc; border-bottom:1px solid #f0f0f0;">- Đèn Pha Module Chiếu Sáng Đường</a><a href="/danh-muc/den-pha-module-chieu-sang-cang/" style="padding-left:24px; font-size:14px; background:#f8fafc; border-bottom:1px solid #f0f0f0;">- Đèn Pha Module Chiếu Sáng Cảng</a><a href="/danh-muc/den-pha-module-chieu-sang-san-bay/" style="padding-left:24px; font-size:14px; background:#f8fafc; border-bottom:1px solid #f0f0f0;">- Đèn Pha Module Chiếu Sáng Sân Bay</a><a href="/danh-muc/den-pha-module-chong-choi/" style="padding-left:24px; font-size:14px; background:#f8fafc; border-bottom:1px solid #f0f0f0;">- Đèn Pha Module Chống Chói</a>
     </div>
+    <a href="/gioi-thieu/">Giới thiệu</a>
     <a href="/bai-viet/">Bài viết</a>
   </nav>
 <div class="breadcrumb"><a href="https://denmodule.thanhdatled.com/">Trang chủ</a> &raquo; Đèn Pha Module Chiếu Sáng Bãi Xe</div>
@@ -211,8 +210,28 @@
   </a></div>
 </div>
 
-  <footer class="site-footer">
-    <p>&copy; 2026 Thanh Dat LED. All rights reserved.</p>
+  <footer class="site-footer" style="background:#0f172a; color:#cbd5e1; padding:40px 20px 30px; font-size:14px; margin-top:40px;">
+    <div style="max-width:1200px; margin:0 auto; display:grid; grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); gap:30px; margin-bottom:30px; text-align:left;">
+      <div>
+        <h3 style="color:#fff; font-size:16px; margin-bottom:12px;">CÔNG TY TNHH TM &amp; DV THÀNH ĐẠT LED</h3>
+        <p style="margin-bottom:8px;">Chuyên cung cấp đèn LED chiếu sáng chính hãng, giải pháp chiếu sáng công nghiệp, sân thể thao và năng lượng mặt trời.</p>
+        <p>📍 Số 938 đường Quang Trung, Phường Yên Nghĩa, Thành Phố Hà Nội, Việt Nam</p>
+      </div>
+      <div>
+        <h3 style="color:#fff; font-size:16px; margin-bottom:12px;">Liên kết nhanh</h3>
+        <p style="margin-bottom:6px;"><a href="https://denmodule.thanhdatled.com/" style="color:#cbd5e1;">Trang chủ</a></p>
+        <p style="margin-bottom:6px;"><a href="https://denmodule.thanhdatled.com/gioi-thieu/" style="color:#cbd5e1;">Giới thiệu công ty</a></p>
+        <p style="margin-bottom:6px;"><a href="https://denmodule.thanhdatled.com/bai-viet/" style="color:#cbd5e1;">Tin tức & Bài viết</a></p>
+      </div>
+      <div>
+        <h3 style="color:#fff; font-size:16px; margin-bottom:12px;">Hỗ trợ khách hàng</h3>
+        <p style="margin-bottom:6px;">Hotline/Zalo: <strong style="color:#ffcc00;">0986474671</strong></p>
+        <p style="margin-bottom:6px;">Tư vấn kỹ thuật 24/7</p>
+      </div>
+    </div>
+    <div style="border-top:1px solid rgba(255,255,255,0.1); padding-top:20px; text-align:center;">
+      <p>© 2026 Thanh Dat LED. All rights reserved.</p>
+    </div>
   </footer>
   <a href="https://khuyenmai.thanhdatled.com/tdl-chatbot/" target="_blank" rel="noopener" class="floating-chatbot-btn">
     <div class="floating-chatbot-icon">🤖</div>
@@ -224,7 +243,7 @@
   <div class="mobile-cta-bar">
     <a class="m-zalo" href="https://zalo.me/0986474671" target="_blank" rel="noopener">💬 Zalo</a>
     <a class="m-call" href="tel:0986474671">📞 Gọi ngay</a>
-    <a class="m-chat" href="https://khuyenmai.thanhdatled.com/tdl-chatbot/" target="_blank" rel="noopener">🤖 Chat AI</a>
+    <a class="m-chat" href="https://khuyenmai.thanhdatled.com/tdl-chatbot/" target="_blank" rel="noopener">💬 Chat AI</a>
   </div>
 </body>
 </html>
