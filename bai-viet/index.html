@@ -21,15 +21,16 @@
 <style>
   :root { --brand-red:#d32f2f; --brand-blue:#0068ff; --text-dark:#222; --border:#e2e8f0; --radius:12px; }
   * { margin:0; padding:0; box-sizing:border-box; }
+  html, body { overflow-x:hidden; max-width:100%; }
   img { max-width:100%; }
   body { font-family:'Segoe UI',Arial,sans-serif; color:var(--text-dark); background:#f4f6f9; line-height:1.6; padding-bottom:70px; }
   a { text-decoration:none; color:var(--brand-blue); }
   h1,h2,h3 { line-height:1.35; }
 
   .site-header { position:sticky; top:0; z-index:1000; background:#fff; border-bottom:1px solid var(--border); padding:12px 24px; display:flex; align-items:center; justify-content:space-between; gap:16px; }
-  .site-header .logo { display:flex; align-items:center; gap:10px; flex-shrink:0; }
-  .site-header .logo img { height:44px; width:auto; object-fit:contain; }
-  .site-header .logo .brand-name { font-size:18px; font-weight:800; color:#0f172a; letter-spacing:-0.3px; white-space:nowrap; }
+  .site-header .logo { display:flex; align-items:center; gap:10px; flex-shrink:1; min-width:0; overflow:hidden; }
+  .site-header .logo img { height:44px; width:auto; object-fit:contain; flex-shrink:0; }
+  .site-header .logo .brand-name { font-size:18px; font-weight:800; color:#0f172a; letter-spacing:-0.3px; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
   .site-header nav.desktop-nav { display:flex; gap:6px; font-weight:600; font-size:14.5px; align-items:center; flex-wrap:nowrap; white-space:nowrap; }
   .site-header nav a { padding:8px 12px; border-radius:6px; color:#222; }
   .site-header nav a:hover { background:#f4f6f9; }
@@ -54,7 +55,7 @@
 
   /* THANH DI ĐỘNG DƯỚI CÙNG */
   .mobile-cta-bar { display:none; position:fixed; bottom:0; left:0; right:0; background:#fff; border-top:1px solid var(--border); z-index:9999; padding:8px 10px; justify-content:space-around; align-items:center; box-shadow:0 -4px 12px rgba(0,0,0,0.1); }
-  .mobile-cta-bar a { flex:1; text-align:center; padding:10px 4px; border-radius:8px; font-weight:700; font-size:13.5px; color:#fff; margin:0 3px; display:flex; align-items:center; justify-content:center; gap:5px; text-decoration:none; }
+  .mobile-cta-bar a { flex:1; min-width:0; text-align:center; padding:10px 4px; border-radius:8px; font-weight:700; font-size:13.5px; color:#fff; margin:0 3px; display:flex; align-items:center; justify-content:center; gap:5px; text-decoration:none; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
   .mobile-cta-bar .m-zalo { background:#0068ff; }
   .mobile-cta-bar .m-call { background:#d32f2f; }
   .mobile-cta-bar .m-chat { background:#0b1f3a; color:#ffcc00; border:1px solid rgba(255,204,0,0.4); }
@@ -71,6 +72,9 @@
     .mobile-cta-bar { display:flex !important; }
     .menu-toggle { display:block; }
     .container { padding:16px 14px !important; }
+
+    /* FIX: footer không ép cột tối thiểu 250px làm tràn ngang trên điện thoại nhỏ */
+    .site-footer > div { grid-template-columns: 1fr !important; }
   }
   @media (min-width:769px) {
     .mobile-nav { display:none !important; }
@@ -803,6 +807,26 @@
   <a class="article-card" href="/bai-viet/den-pha-led-module-tan-nhiet-nhom-giai-phap-kiem-soat-nhiet-do-led/" style="background:#fff; border:1px solid #e2e8f0; border-radius:12px; padding:14px; display:flex; flex-direction:column;">
     <img src="https://img.thanhdatshop.com/den-pha-led/den-pha-module-5050-02/den-pha-module-5050-02-200w/den-pha-module-5050-02-200w-1.jpg" alt="Đèn pha LED module tản nhiệt nhôm – Giải pháp kiểm soát nhiệt độ LED" width="250" height="180" loading="lazy" style="width:100%; height:180px; object-fit:cover; border-radius:8px; margin-bottom:12px;">
     <h3 style="font-size:15px; color:#222; margin-bottom:6px; min-height:40px;">Đèn pha LED module tản nhiệt nhôm – Giải pháp kiểm soát nhiệt độ LED</h3>
+    <span style="margin-top:auto; color:#0068ff; font-weight:700; font-size:13px;">Đọc tiếp &rarr;</span>
+  </a>
+  <a class="article-card" href="/bai-viet/den-pha-led-module-khung-hop-cau-tao-chac-chan-de-thay-the-module/" style="background:#fff; border:1px solid #e2e8f0; border-radius:12px; padding:14px; display:flex; flex-direction:column;">
+    <img src="https://img.thanhdatshop.com/den-pha-led/den-pha-module-5050-02/den-pha-module-5050-02-300w/den-pha-module-5050-02-300w-1.jpeg" alt="Đèn pha LED module khung hộp – Cấu tạo chắc chắn, dễ thay thế module" width="250" height="180" loading="lazy" style="width:100%; height:180px; object-fit:cover; border-radius:8px; margin-bottom:12px;">
+    <h3 style="font-size:15px; color:#222; margin-bottom:6px; min-height:40px;">Đèn pha LED module khung hộp – Cấu tạo chắc chắn, dễ thay thế module</h3>
+    <span style="margin-top:auto; color:#0068ff; font-weight:700; font-size:13px;">Đọc tiếp &rarr;</span>
+  </a>
+  <a class="article-card" href="/bai-viet/den-pha-led-module-de-sua-chua-thiet-ke-thuan-tien-thay-chip-va-nguon/" style="background:#fff; border:1px solid #e2e8f0; border-radius:12px; padding:14px; display:flex; flex-direction:column;">
+    <img src="https://img.thanhdatshop.com/den-pha-led/den-pha-module-5050-02/den-pha-module-5050-02-400w/den-pha-module-5050-02-400w-1.jpeg" alt="Đèn pha LED module dễ sửa chữa – Thiết kế thuận tiện thay chip và nguồn" width="250" height="180" loading="lazy" style="width:100%; height:180px; object-fit:cover; border-radius:8px; margin-bottom:12px;">
+    <h3 style="font-size:15px; color:#222; margin-bottom:6px; min-height:40px;">Đèn pha LED module dễ sửa chữa – Thiết kế thuận tiện thay chip và nguồn</h3>
+    <span style="margin-top:auto; color:#0068ff; font-weight:700; font-size:13px;">Đọc tiếp &rarr;</span>
+  </a>
+  <a class="article-card" href="/bai-viet/den-pha-led-module-thay-the-linh-kien-giai-phap-sua-chua-tiet-kiem-chi-phi/" style="background:#fff; border:1px solid #e2e8f0; border-radius:12px; padding:14px; display:flex; flex-direction:column;">
+    <img src="https://img.thanhdatshop.com/den-pha-led/den-pha-module-5050-02/den-pha-module-5050-02-500w/den-pha-module-5050-02-500w-1.jpeg" alt="Đèn pha LED module thay thế linh kiện – Giải pháp sửa chữa tiết kiệm chi phí" width="250" height="180" loading="lazy" style="width:100%; height:180px; object-fit:cover; border-radius:8px; margin-bottom:12px;">
+    <h3 style="font-size:15px; color:#222; margin-bottom:6px; min-height:40px;">Đèn pha LED module thay thế linh kiện – Giải pháp sửa chữa tiết kiệm chi phí</h3>
+    <span style="margin-top:auto; color:#0068ff; font-weight:700; font-size:13px;">Đọc tiếp &rarr;</span>
+  </a>
+  <a class="article-card" href="/bai-viet/den-pha-led-module-thay-nguon-led-khi-nao-can-thay-driver-moi/" style="background:#fff; border:1px solid #e2e8f0; border-radius:12px; padding:14px; display:flex; flex-direction:column;">
+    <img src="https://img.thanhdatshop.com/den-pha-led/den-pha-module-5050-02/den-pha-module-5050-02-600w/den-pha-module-5050-02-600w-1.jpeg" alt="Đèn pha LED module thay nguồn LED – Khi nào cần thay driver mới?" width="250" height="180" loading="lazy" style="width:100%; height:180px; object-fit:cover; border-radius:8px; margin-bottom:12px;">
+    <h3 style="font-size:15px; color:#222; margin-bottom:6px; min-height:40px;">Đèn pha LED module thay nguồn LED – Khi nào cần thay driver mới?</h3>
     <span style="margin-top:auto; color:#0068ff; font-weight:700; font-size:13px;">Đọc tiếp &rarr;</span>
   </a></div>
 </div>
